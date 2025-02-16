@@ -29,8 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
-    
-    # Task URLs
     path('list', TaskListView.as_view(), name='task-list'),
     path('create/', TaskCreateView.as_view(), name='task-create'),
     path('update/<int:pk>/', TaskUpdateView.as_view(), name='task-update'),

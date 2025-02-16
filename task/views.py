@@ -18,7 +18,7 @@ class TaskCreateView(View):
     template_name = "task_form.html"
     form_class = TaskForm
 
-    # 🔑 Key Fix: Apply login_required to ALL methods via dispatch()
+    
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
